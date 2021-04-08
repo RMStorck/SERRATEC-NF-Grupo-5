@@ -56,8 +56,8 @@ if (querBebida[0] == "S" || querBebida[0] == "s") {
     5- Del Vale (R$7,00)`));
 }
 
-var tipoEntrega = prompt(`Qual será a forma de entrega?\n 1- Balcão\n 2- Delivery`);
-if (tipoEntrega == 2){
+var tipoDeEntrega = prompt(`Qual será a forma de entrega?\n 1- Balcão\n 2- Delivery`);
+if (tipoDeEntrega == 2){
     var delivery = [
         celularDelivery = prompt(`${nome}, qual seu número de celular:`),
         rua = prompt(`Digite o nome da sua rua:`),
@@ -70,3 +70,19 @@ if (tipoEntrega == 2){
     celularBalcao = prompt(`${nome}, qual seu número de celular:`);
 }
 
+var formaDePagamento = prompt(`Escolha a foma de pagamento: \n
+1- Cartão Crédito
+2- Cartão Débito
+3- Pix
+4- Picpay
+5- Dinheiro`);
+
+if(tipoDeEntrega == 2 && formaDePagamento == 5){
+
+    var precisaDeTroco = prompt(`Precisa de Troco?`);
+
+    if (precisaDeTroco[0] == "S" || precisaDeTroco[0] == "s") {
+        var troco = (prompt(`Quanto precisará de troco:`));
+    }
+
+}
