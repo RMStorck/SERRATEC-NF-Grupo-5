@@ -35,6 +35,7 @@ var formaDePagamento = [
 //             return nomes.join(' ');
 // }
 
+<<<<<<< HEAD
 
 function getTamanhoPizza(){
     let radios = document.getElementsByName("tamanhoPizza");
@@ -42,6 +43,54 @@ function getTamanhoPizza(){
         if(radios[i].checked){
             pedido.tamanho = radios[i].value;
             break;
+=======
+// // if(document.getElementsByTagName("tamanhoPizza"))
+
+
+
+var quantidadeDeSabores = parseInt(prompt("Quer quantos sabores? 2 ou 1"));
+choose(quantidadeDeSabores);
+function choose(qtd){
+    if(qtd > 2 || qtd < 1){
+        quantidadeDeSabores = parseInt(prompt("Digite a quantidade certa de sabores. 2 ou 1?"));
+        choose(quantidadeDeSabores);
+    } else{
+        switch(qtd) {
+            case 1:
+                var sabor = prompt(`Digite o número do sabor da pizza:\n
+                    Relembrando as opções:\n
+                    1- Calabresa\n
+                    2- 4 queijos\n
+                    3- Frango com Catupiry\n
+                    4- Portuguesa\n
+                    5- Camarão\n
+                    6- Carne Seca\n
+                    7- Lombo Canadense\n
+                    8- X-Fritas`);
+                break;
+            case 2:
+                var saborUm = prompt(`Digite o número do sabor da pizza:\n
+                    Relembrando as opções:\n
+                    1- Calabresa\n
+                    2- 4 queijos\n
+                    3- Frango com Catupiry\n
+                    4- Portuguesa\n
+                    5- Camarão\n
+                    6- Carne Seca\n
+                    7- Lombo Canadense\n
+                    8- X-Fritas`);
+                var saborDois = prompt(`Digite o número do segundo sabor:
+                    Relembrando as opções:\n
+                    1- Calabresa\n
+                    2- 4 queijos\n
+                    3- Frango com Catupiry\n
+                    4- Portuguesa\n
+                    5- Camarão\n
+                    6- Carne Seca\n
+                    7- Lombo Canadense\n
+                    8- X-Fritas`);
+                break;
+>>>>>>> e46519b8daf423deb25fd4ce9d29a681c1970fec
         }
     }
 }
@@ -69,35 +118,35 @@ function getTipoBorda(){
 //     }
 // }
 
-function indexSabores(cb, value){
-    let indexSabor;
-    switch(value){
-        case 'calabresa':
-            indexSabor = 0;
-            break;
-        case '4queijos':
-            indexSabor = 1;
-            break;
-        case 'frangoCatupiry':
-            indexSabor = 2;
-            break;
-        case 'portuguesa':
-            indexSabor = 3;
-            break;
-        case 'camarao':
-            indexSabor = 4;
-            break;
-        case 'carneSeca':
-            indexSabor = 5;
-            break;
-        case 'lomboCanadense':
-            indexSabor = 6;
-            break;
-        case 'xFritas':
-            indexSabor = 7;
-            break;
-    }
-}
+// function indexSabores(cb, value){
+//     let indexSabor;
+//     switch(value){
+//         case 'calabresa':
+//             indexSabor = 0;
+//             break;
+//         case '4queijos':
+//             indexSabor = 1;
+//             break;
+//         case 'frangoCatupiry':
+//             indexSabor = 2;
+//             break;
+//         case 'portuguesa':
+//             indexSabor = 3;
+//             break;
+//         case 'camarao':
+//             indexSabor = 4;
+//             break;
+//         case 'carneSeca':
+//             indexSabor = 5;
+//             break;
+//         case 'lomboCanadense':
+//             indexSabor = 6;
+//             break;
+//         case 'xFritas':
+//             indexSabor = 7;
+//             break;
+//     }
+// }
 
 function testSabores(cb, value){
     //quando for clicado
