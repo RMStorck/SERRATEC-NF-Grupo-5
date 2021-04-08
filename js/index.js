@@ -1,17 +1,36 @@
-var nome = prompt("Digite o seu nome:");
+let nome = prompt("Digite o seu nome:");
 alert(`Seja bem vindo a Serra Pizza!\n${nome}, por favor, pressione enter para inciar o seu pedido:`);
-
-var tamanho = inserirTamanho();
-var tipoDeBorda = inserirBorda();
-
+let tamanhos = [
+    {descricao: 'pequena', preco: 25}, 
+    {descricao: 'media', preco: 30}, 
+    {descricao: 'grande', preco: 40}, 
+    {descricao: 'familia', preco: 45}
+];
+let tamanhoEscolhido = inserirTamanho(tamanhos);
+let bordas = [
+    {descricao: 'gorgonzola', preco: 10}, 
+    {descricao: 'provolone', preco: 8}, 
+    {descricao: 'catupiry', preco: 5}, 
+    {descricao: 'cheddar', preco: 5},
+    {descricao: 'sem borda', preco: 0}
+];
+let tipoDeBorda = inserirBorda(bordas);
 alert(`Pronto, ${nome}. Agora, vou te mostrar a lista de sabores:`);
-cardapio();
+let apresentarCardapio = cardapio();
 
-var quantidaDeSabores = escolherSabores();
+let quaisSabores = escolherSabores();
 
-var querBebida = escolherBebida();
+let bebidas = tamanhos = [
+    {descricao: 'coca-cola', preco: 12}, 
+    {descricao: 'fanta', preco: 10}, 
+    {descricao: 'guaraná', preco: 10}, 
+    {descricao: 'h2o', preco: 8},
+    {descricao: 'del vale', preco: 7},
+    {descricao: 'sem bebida', preco: 0}
+];
 
-var tipoDeEntrega = prompt(`Qual será a forma de entrega?\n 1- Balcão\n 2- Delivery`);
-escolherEntrega(tipoDeEntrega, nome);
+let querBebida = escolherBebida(bebidas);
 
-var formaDePagamento = escolherEntrega()
+let tipoDeEntrega = escolherEntrega(nome);
+
+// let formaDePagamento = escolherEntrega(tipoDeEntrega)

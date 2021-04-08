@@ -1,11 +1,5 @@
-function inserirTamanho() {
-    let tamanho = [
-        {descricao: 'pequena', preco: 25}, 
-        {descricao: 'media', preco: 30}, 
-        {descricao: 'grande', preco: 40}, 
-        {descricao: 'familia', preco: 45}
-    ];
-    var solicitarTamanho = parseInt(prompt(`Digite o numero referente ao tamanho da pizza que voce quer:\n
+function inserirTamanho(tamanho) {
+    let solicitarTamanho = parseInt(prompt(`Digite o numero referente ao tamanho da pizza que voce quer:\n
     1- Pequena (R$25,00)\n
     2- Media (R$30,00)\n
     3- Grande (R$40,00)\n
@@ -19,24 +13,16 @@ function inserirTamanho() {
             return tamanho[2];
         case 4:
             return tamanho[3];
-        default: 
-            return tamanho[4];
     }
 }
-function inserirBorda() {
-    let borda = [
-        {descricao: 'gorgonzola', preco: 10}, 
-        {descricao: 'provolone', preco: 8}, 
-        {descricao: 'catupiry', preco: 5}, 
-        {descricao: 'cheddar', preco: 5},
-        {descricao: 'sem borda', preco: 0}
-    ];
-    var tipoDeBorda = prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
+
+function inserirBorda(borda) {
+    let tipoDeBorda = parseInt(prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
     1- Gorgonzola (R$10,00)\n
     2- Provolone (R$8,00)\n
     3- Catupiry (R$5,00)\n
     4- Cheddar (R$5,00)\n
-    5- Sem borda (R$0,00)`);
+    5- Sem borda (R$0,00)`));
     switch(tipoDeBorda) {
         case 1:
             return borda[0];
@@ -46,8 +32,28 @@ function inserirBorda() {
             return borda[2];
         case 4:
             return borda[3];
-        default: 
+        default:
             return borda[4];
+    }
+}
+function sabores(numero) {
+    switch(numero){
+        case 1:
+            return 'Calabresa';
+        case 2:
+            return '4 queijos';
+        case 3:
+            return 'Frango com Catupiry';
+        case 4:
+            return 'Portuguesa';
+        case 5:
+            return 'Camarão';
+        case 6:
+            return 'Carne Seca';
+        case 7:
+            return 'Lombo Canadense';
+        case 8:
+            return 'X-Fritas';
     }
 }
 function escolherSabores() {
@@ -57,7 +63,7 @@ function escolherSabores() {
     } 
     switch (quantidadeDeSabores) {
         case 1:
-            var sabor = prompt(`Digite o número do sabor da pizza:\n
+            var sabor = parseInt(prompt(`Digite o número do sabor da pizza:\n
                     Relembrando as opções:\n
                     1- Calabresa\n
                     2- 4 queijos\n
@@ -66,10 +72,10 @@ function escolherSabores() {
                     5- Camarão\n
                     6- Carne Seca\n
                     7- Lombo Canadense\n
-                    8- X-Fritas`);
-            return [sabor];
+                    8- X-Fritas`));   
+            return [sabores(sabor)];
         case 2:
-            var saborUm = prompt(`Digite o número do sabor da pizza:\n
+            var saborUm = parseInt(prompt(`Digite o número do sabor da pizza:\n
                     Relembrando as opções:\n
                     1- Calabresa\n
                     2- 4 queijos\n
@@ -78,8 +84,8 @@ function escolherSabores() {
                     5- Camarão\n
                     6- Carne Seca\n
                     7- Lombo Canadense\n
-                    8- X-Fritas`);
-            var saborDois = prompt(`Digite o número do segundo sabor:
+                    8- X-Fritas`));
+            var saborDois = parseInt(prompt(`Digite o número do segundo sabor:
                     Relembrando as opções:\n
                     1- Calabresa\n
                     2- 4 queijos\n
@@ -88,55 +94,72 @@ function escolherSabores() {
                     5- Camarão\n
                     6- Carne Seca\n
                     7- Lombo Canadense\n
-                    8- X-Fritas`);
-            return [saborUm, saborDois];
+                    8- X-Fritas`));
+            return [sabores(saborUm), sabores(saborDois)];
     }
 }
-function escolherBebida(opcoes) {
-    var querBebida = prompt(`Você gostaria de uma bebida?`);
-    /*if (querBebida[0] == "S" || querBebida[0] == "s") {
-        var tiposDeBebidas = (prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
+function escolherBebida(bebida) {
+    let querBebida = prompt(`Você gostaria de uma bebida?`);
+    if (querBebida[0] == "S" || querBebida[0] == "s") {
+        let tiposDeBebidas = (prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
         1- Coca-cola (R$12,00)\n
         2- Fanta (R$10,00)\n
         3- Guaraná (R$10,00)\n
         4- H2O (R$8,00)\n
         5- Del Vale (R$7,00)`));
-        return tiposDeBebidas;
+        switch(tiposDeBebidas) {
+            case 1:
+                return bebida[0];
+            case 2:
+                return bebida[1];
+            case 3:
+                return bebida[2];
+            case 4:
+                return bebida[3];
+            case 5:
+                return bebida[4];
+        }
     }
-    */
-   return opcoes[i];
-
-    return 0;
+    return bebida [5];
 }
-function escolherEntrega(entrega, nome) {
+function escolherEntrega(nome) {
+    let entrega = parseInt(prompt(`Qual será a forma de entrega?\n 1- Balcão\n 2- Delivery`));
     if (entrega == 2){
-        var delivery = [
-            celularDelivery = prompt(`${nome}, qual seu número de celular:`),
-            rua = prompt(`Insira o nome da sua rua:`),
-            bairro = prompt(`Insira o seu bairro:`),
-            numero = prompt(`Insira o número da sua residência?`),
-            complemento = prompt(`Insira o complemento?`),
-            pontoDeReferencia = prompt(`Insira um ponto de referência:`)
-        ]
+        let delivery = {
+            tipo: 'Delivery',
+            celular: prompt(`${nome}, qual seu número de celular:`),
+            rua: prompt(`Insira o nome da sua rua:`),
+            bairro: prompt(`Insira o seu bairro:`),
+            numero: prompt(`Insira o número da sua residência?`),
+            complemento: prompt(`Insira o complemento?`),
+            pontoDeReferencia: prompt(`Insira um ponto de referência:`)
+         };
+         return delivery;
     }else{
-        celularBalcao = prompt(`${nome}, qual seu número de celular:`);
+        let balcao = {
+            tipo: 'Balcao',
+            celular: prompt(`${nome}, qual seu número de celular:`)
+        };
+        return balcao;
     }
 }
-function escolherPagamento() {
-    var tipoDeEntrega = prompt(`Escolha a foma de pagamento: \n
+function escolherPagamento(tipoDeEntrega) {
+    let tipoDePagamento = parseInt(prompt(`Escolha a foma de pagamento: \n
     1- Cartão Crédito
     2- Cartão Débito
     3- Pix
     4- Picpay
-    5- Dinheiro`);
+    5- Dinheiro`));
     
-    if(tipoDeEntrega == 2 && formaDePagamento == 5){
+    if(tipoDeEntrega.tipo == 'Delivery' && formaDePagamento == 5){
     
-        var precisaDeTroco = prompt(`Precisa de Troco?`);
+        let precisaDeTroco = prompt(`Precisa de Troco?`);
     
         if (precisaDeTroco[0] == "S" || precisaDeTroco[0] == "s") {
-            var troco = (prompt(`Troco para quanto?`));
+            var troco = parseInt(prompt(`Troco para quanto?`));
+            return troco
         }
+        return ''
     }
 }
 function cardapio(){
