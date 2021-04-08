@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Preciso criar um sistema que calcule o valor liquido
+        // do imposto de renda
+
+        // 1° Informar o salário.
+        // 2° Informar o número de dependentes.
+        //   2.1 condicionar se há ou não dependentes.
+        // 3° calcular o valor do imposto de renda conforme a tabela.
+
+        alert("Seja Bem Vindo(a) à calculadora de IRRF!")
+        
+        var salario = parseFloat(prompt("Por favor, informe seu salário:"));
+
+        while(isNaN(salario)){
+            alert("Erro ao inserir o valor. Insira novamente!");
+            var salario = parseFloat(prompt("Por favor, informe seu salário:"));
+        }
+        document.write(`Salário informado: R$ ${salario.toFixed(2)} <br>`);
+        
+        var dep = prompt("Você possui dependente? (sim/não)");
+
+        if(dep.toLowerCase() == "sim"){
+            var dependentes = parseInt(prompt("Digite o número de dependentes:"));
+            alert("Ok, vamos aos cálculos!");
+            while(isNaN(dependentes)){
+                alert(`Você não digitou corretamente o número de dependentes.`);
+                var dependentes = parseInt(prompt("Digite o número de dependentes:"));
+                // alert("Ok, vamos aos cálculos!");
+            };
+        } else if(dep.toLowerCase() == "não" || dep.toLowerCase() == "nao"){
+            var dependentes = 0;
+            alert("Ok, vamos aos cálculos!");
+
+        };
+        document.write(`O usuário possui dependente(s): ${dep}<br>`);
+        if (dep.toLowerCase() == "sim"){
+            document.write(`Número de dependente(s): ${dependentes}<br><br>`);
+        };
+
+        salario -= dependentes*189.59;
+
+        if (salario <= 1903.98){
+            document.write(`Você é isento de pagamento!`);
+        }else if (salario <= 2826.65){
+            desconto = salario * 0.075 - 142.80;
+        }else if (salario <= 3751.05){
+            desconto = salario * 0.15 - 354.80;
+        }else if (salario <= 4664.68){
+            desconto = salario * 0.225 - 636.13;
+        }else {
+            desconto = salario * 0.275 - 869.36;
+        };
+        
+        document.write(`O valor de desconto é de R$ ${desconto.toFixed(2)}`);
+
+    </script>
+</body>
+</html>

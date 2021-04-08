@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVALIAÇÃO NUTRICIONAL</title>
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/fotos-gratis/legumes-coloridos-no-pano-de-fundo-de-mesa-de-madeira_23-2148165597.jpg?size=626&ext=jpg");
+            font: normal 14pt Arial;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var nome = prompt("Digite o seu nome:");
+        var idade = parseFloat(prompt(`${nome}, qual sua idade?`));
+        var sexo = prompt(`${nome} qual é o seu sexo?`);
+        var peso = parseFloat(prompt(`${nome}, preciso saber o seu peso:`));
+        var altura = parseFloat(prompt(`${nome}, qual é a sua altura? \n (em centímetros)`));
+        var pesoaperder = parseFloat(prompt(`${nome}, quanto você deseja emagrecer?`));
+        var exercicio = parseInt(prompt(`${nome}, quantas vezes por semana você pratica exercícios?`));
+
+        //Cálculos
+
+        var altura2 = (altura * altura) / 10000;
+        var IMC = peso / (altura2);
+
+        var caloriapordiaparaemagrecer = peso * 20;
+
+        //Variáveis
+
+        var GEBMM = GEBMas();
+        var GEBFF = GEBFem();
+        var GETMM = GETMas();
+        var GETFF = GETFem();
+        var getmretirado = GETMM * 0.22;
+        var getfretirado = GETFF * 0.22;
+        var caloriasperder = (7700 * pesoaperder);
+        var totaldediasm = caloriasperder / getmretirado;
+        var totaldediasf = caloriasperder / getfretirado;
+        var totaldemesesm = totaldediasm/30;
+        var totaldemesesf = totaldediasf/30;
+        
+
+        //Mostrar na Tela
+
+        document.write(`<h1>AVALIAÇÃO NUTRICIONAL</h1>
+            <h2>DADOS:</h2> <br>
+            <strong>Nome:</strong> ${nome} <br>
+            <strong>Idade:</strong> ${idade} anos<br>
+            <strong>Sexo:</strong> ${sexo} <br>
+            <strong>Altura:</strong> ${altura} cm<br>
+            <strong>Peso:</strong> ${peso} kg<br>
+            <strong>Peso a perder:</strong> ${pesoaperder} kg<br>
+            <strong>Peso desejado:</strong> ${peso - pesoaperder} kg<br>
+            <strong>IMC:</strong> ${IMC.toFixed(1)}, ${calcularIMC(IMC)} <br>`)
+        document.write("<strong>Atividade Física:</strong>" + exercicio + " vezes por semana <br><br>");
+
+        document.write(`<strong>Você precisa queimar um total de:</strong> ${caloriasperder} calorias para emagrecer ${pesoaperder} kg <br><br>`);
+
+        if (sexo == "masculino" || "Masculino" || "MASCULINO" || "m" || "M") {
+            document.write(`<strong>Seu GET é igual a:</strong> ${GETMM.toFixed(0)} <br>`);
+            document.write(`<strong>Seu GEB é igual a:</strong> ${GEBMM.toFixed(0)} <br><br>`);
+            document.write(`<h2>Conclusão:</h2>`)
+            document.write(`Levando em consideração que um 1kg tem 7.700 calorias, para perder ${pesoaperder} kg, é preciso queimar um total de ${caloriasperder} cal<br> 
+            Diante da quantidade de exercicios que você faz você precisaria de um total de ${totaldediasm.toFixed(0)} dias(${totaldemesesm.toFixed(3)} meses) para emagrecer <br>`);
+
+        }
+        else if (sexo == "feminino" || "Feminino" || "FEMININO" || "f" || "F") {
+            document.write(`<strong>Seu gasto energetico total(GET) é igual a:</strong> ${GETFF.toFixed(0)} <br>`);
+            document.write(`<strong>Seu gasto energetico basal(GEB) é igual a:</strong> ${GEBFF.toFixed(0)} <br><br>`);
+            document.write(`<h2>Conclusão:</h2>`)
+            document.write(` Levando em consideração que um 1kg tem 7.700 calorias, para perder ${pesoaperder} kg, é preciso queimar um total de ${caloriasperder} cal<br> 
+            Diante da quantidade de exercicios que você faz você precisaria de um total de ${totaldediasf.toFixed(0)} dias(${totaldemesesf.toFixed(3)} meses) para emagrecer <br>`);
+        }
+
+        else {
+
+            document.write(`Calculo incorreto pois voce digitou algum dado incorreto <br>`);
+        }
+
+        //Calculo IMC
+
+        function calcularIMC(imc) {
+
+            if (imc < 18.5) {
+                return ("<br> Você está <strong>abaixo do peso</strong>");
+            } else if (imc < 24.9) {
+               return ("<br> Você está no <strong>peso normal</strong>");
+            } else if (imc < 29.9) {
+               return ("<br> Você está com <strong>sobrepeso</strong>");
+            } else if (imc < 34.9) {
+               return ("<br> Você está com <strong>obesidade grau I</strong>");
+            } else if (imc < 39.9) {
+               return ("<br> Você está com <strong>obesidade grau II</strong>");
+            } else {
+               return ("<br> Você está com <strong>obesidade mórbida</strong>");
+            }
+        
+        }
+
+        //Funções
+
+        function GEBFem() {
+            if (sexo == 'f' || 'F' || 'Feminino' || 'feminino') {
+                var GEBF = 655 + (9.6 * peso) + (1.9 * altura) - (4.7 * idade);
+
+                return GEBF;
+            }
+
+            else {
+                return document.write(`Preciso que recomesse, pois você preencheu seu sexo de forma errada.`);
+            }
+        }
+
+        function GEBMas() {
+            if (sexo == 'm' || 'M' || 'Masculino' || 'masculino') {
+                var GEBM = 66 + (13.8 * peso) + (5.0 * altura) - (6.8 * idade);
+
+                return GEBM;
+            }
+
+            else {
+                returndocument.write(`Preciso que recomesse, pois você preencheu seu sexo de forma errada.`)
+            }
+        }
+
+        function GETMas() {
+
+            var GETM=0;
+
+            if (exercicio == 0) {
+
+                var FA = 1.2;
+                GETM = GEBMM * FA;
+
+                return GETM;
+
+
+            }
+
+            else if (exercicio >= 1 && exercicio <= 3) {
+
+                var FA = 1.375;
+                GETM = GEBMM * FA;
+
+                return GETM;
+
+            }
+
+            else if (exercicio >= 4 && exercicio <= 5) {
+
+                var FA = 1.55;
+                GETM = GEBMM * FA;
+
+                return GETM
+
+            }
+
+            else if (exercicio >= 6 && exercicio <= 7) {
+
+                var FA = 1.725;
+                GETM = GEBMM * FA;
+
+                return GETM;
+
+            }
+
+            else if (exercicio >= 8) {
+
+                var FA = 1.9;
+                GETM = GEBMM * FA;
+
+                return GETM;
+
+            }
+
+        }
+
+        function GETFem() {
+            var GETF =0;
+            if (exercicio == 0) {
+
+                var FA = 1.2;
+                GETF = GEBFem * FA;
+
+                return GETF;
+
+            }
+            else if (exercicio >= 1 && exercicio <= 3) {
+
+                var FA = 1.375;
+                GETF = GEBFem * FA;
+
+                return GETF;
+
+
+            }
+
+            else if (exercicio >= 4 && exercicio <= 5) {
+
+                var FA = 1.55;
+                GETF = GEBFem * FA;
+
+                return GETF;
+
+
+            }
+
+            else if (exercicio >= 6 && exercicio <= 7) {
+
+                var FA = 1.725;
+                GETF = GEBFem * FA;
+
+                return GETF;
+
+
+            }
+
+            else if (exercicio >= 8) {
+
+                var FA = 1.9;
+                GETF = GEBFem * FA;
+
+                return GETF;
+
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
