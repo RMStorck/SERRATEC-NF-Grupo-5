@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pizzaria do Binho</title>
+</head>
+<body>
+    <header>Pizzaria do Binho</header>
+    <div class="main">
+        <div class="form">
+            <form action="" id="tamanhoPizza">
+                <p>Tamanho da pizza</p>
+                <input type="radio" id="pequena" name="tamanhoPizza" value="pequena">
+                <label for="pequena">Pequena (20cm) - R$25,00</label><br>
+                <input type="radio" id="media" name="tamanhoPizza">
+                <label for="media">Media (25cm) - R$30,00</label><br>
+                <input type="radio" id="gigante" name="tamanhoPizza">
+                <label for="gigante">Gigante (35cm) - R$40,00</label><br>
+                <input type="radio" id="familia" name="tamanhoPizza">
+                <label for="familia">Familia (40cm) - R$45,00</label><br>
+            </form>
+            <br>
+            <form action="" id="bordaPizza">
+                <p>Tipo de borda</p>
+                <input type="radio" id="gorgonzola" name="bordaPizza">
+                <label for="gorgonzola">Gorgonzola - R$10,00</label><br>
+                <input type="radio" id="provolone" name="bordaPizza">
+                <label for="provolone">Provolone - R$8,00</label><br>
+                <input type="radio" id="catupiry" name="bordaPizza">
+                <label for="catupiry">Catupiry - R$5,00</label><br>
+                <input type="radio" id="cheddar" name="bordaPizza">
+                <label for="cheddar">Cheddar - R$5,00</label><br>
+                <input type="radio" id="semBorda" name="bordaPizza">
+                <label for="semBorda">Sem borda</label><br>
+            </form>
+            <br>
+            <form action="" id="sabores">
+                <p>Sabores (Apenas 2 sabores por pizza)</p>
+                <input type="checkbox" id="calabresa" name="sabores">
+                <label id="label" for="calabresa">Calabresa</label><br>
+                <span>- Mussarela, Calabresa e Cebola</span><br>
+                <input type="checkbox" id="4queijos" name="sabores">
+                <label id="label" for="4queijos">4 Queijos</label><br>
+                <span>- Mussarela, Cheddar, Parmesão e Prato</span><br>
+                <input type="checkbox" id="frangoCatupiry" name="sabores">
+                <label id="label" for="frangoCatupiry">Frango com Catupiry</label><br>
+                <span>- Mussarela, Frango e Catupiry</span><br>
+                <input type="checkbox" id="portuguesa" name="sabores">
+                <label id="label" for="portuguesa">Portuguesa</label><br>
+                <span>- Mussarela, Pimentão, Cebola, Presunto, Ovo e Cebola</span><br>
+                <input type="checkbox" id="camarao" name="sabores">
+                <label id="label" for="camarao">Camarão</label><br>
+                <span>- Mussarela, Camarão, Salsinha e Cebolinha</span><br>
+                <input type="checkbox" id="carneSeca" name="sabores">
+                <label id="label" for="carneSeca">Carne seca</label><br>
+                <span>- Mussarela, Carne seca e Cream Cheese</span><br>
+                <input type="checkbox" id="lomboCanadense" name="sabores">
+                <label id="label" for="lomboCanadense">Lombo Canadense</label><br>
+                <span>- Mussarela, Lombo Canadense, Tomate, Orégano e Cebola</span><br>
+                <input type="checkbox" id="xFritas" name="sabores">
+                <label id="label" for="xFritas">X-Fritas</label><br>
+                <span style="padding-bottom: 70px;">- Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola e Batata Frita</span><br>
+            </form>
+        </div>
+        <div class="form" style="position: absolute; margin-left: 500px;">
+            <form action="" id="bebidas">
+                <p>Bebidas</p>
+                <input type="radio" id="cocaCola" name="bebidas">
+                <label for="cocaCola">Coca-Cola - R$12,00</label><br>
+                <input type="radio" id="fanta" name="bebidas">
+                <label for="fanta">Fanta - R$10,00</label><br>
+                <input type="radio" id="guarana" name="bebidas">
+                <label for="guarana">Guaraná Antarctica - R$10,00</label><br>
+                <input type="radio" id="h2o" name="bebidas">
+                <label for="h2o">H2O - R$8,00</label><br>
+                <input type="radio" id="delValle" name="bebidas">
+                <label for="delValle">Del Valle - R$7,00</label><br>
+                <input type="radio" id="semBebida" name="bebidas">
+                <label for="semBebida">Nenhuma</label><br>
+            </form>
+            <br>
+            <form action="" id="tipoEntrega">
+                <p>Tipo de entrega</p>
+                <input type="radio" id="retirada" name="tipoEntrega">
+                <label for="retirada">Retirada no Balcão</label><br>
+                <input type="radio" id="delivery" name="tipoEntrega">
+                <label for="delivery">Delivery - R$5,00</label><br><br>
+                <input type="submit" style="margin-left: 170px;" name="tipoEntrega">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+</body>
+</html>
