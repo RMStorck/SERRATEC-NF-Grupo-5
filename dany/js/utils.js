@@ -32,3 +32,5 @@ function makeNameCapitalize(value){
             }
             return nomes.join(' ');
 }
+
+// if(document.getElementsByTagName("tamanhoPizza"))
