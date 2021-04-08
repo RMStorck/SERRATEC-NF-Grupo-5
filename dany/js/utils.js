@@ -37,14 +37,14 @@
 
 
 
-var qtdDeSabores = parseInt(prompt("Quer quantos sabores? 2 ou 1"));
-choose(qtdDeSabores);
+var quantidadeDeSabores = parseInt(prompt("Quer quantos sabores? 2 ou 1"));
+choose(quantidadeDeSabores);
 function choose(qtd){
     if(qtd > 2 || qtd < 1){
-        qtdDeSabores = parseInt(prompt("Digite a quantidade certa de sabores. 2 ou 1?"));
-        choose(qtdDeSabores);
+        quantidadeDeSabores = parseInt(prompt("Digite a quantidade certa de sabores. 2 ou 1?"));
+        choose(quantidadeDeSabores);
     } else{
-        switch(quantidaDeSabores) {
+        switch(qtd) {
             case 1:
                 var sabor = prompt(`Digite o número do sabor da pizza:\n
                     Relembrando as opções:\n
