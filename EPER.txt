@@ -1,0 +1,20 @@
+Grupo: Dany, Rafael, Roberta, Rosimar e Sylvia
+
+Objetivo: Criar um sistema para efetuar pedidos em Pizzaria.
+
+Precisamos de um sistema que receba os pedidos de uma pizzaria, os pedidos precisam ter:
+- O tamanho da pizza
+- O tipo de borda       
+- Os Sabores (Apenas 2 sabores por pizza)
+- As bebidas
+- O tipo de entrega (delivery ou balcão)
+
+Começar: 
+- O nome do cliente
+- O tipo de entrega: 
+    - delivery: (retorna depois no checkout para pegar as informações da entrega)
+        - nome completo
+        - celular
+        - endereço
+    - balcão
+- O pedido
