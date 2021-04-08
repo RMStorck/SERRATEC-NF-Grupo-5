@@ -33,4 +33,4 @@ let querBebida = escolherBebida(bebidas);
 
 let tipoDeEntrega = escolherEntrega(nome);
 
-// let formaDePagamento = escolherEntrega(tipoDeEntrega)
+let formaDePagamento = escolherPagamento(tipoDeEntrega);

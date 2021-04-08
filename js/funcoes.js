@@ -143,6 +143,21 @@ function escolherEntrega(nome) {
         return balcao;
     }
 }
+function pagamento(numero) {
+    switch(numero){
+        case 1:
+            return {tipo:'Cartão Crédito'};
+        case 2:
+            return {tipo:'Cartão Débito'};
+        case 3:
+            return {tipo:'Pix'};
+        case 4:
+            return {tipo:'Picpay'};
+        case 5:
+            return {tipo:'Dinheiro', troco: 0};
+        
+    }
+}
 function escolherPagamento(tipoDeEntrega) {
     let tipoDePagamento = parseInt(prompt(`Escolha a foma de pagamento: \n
     1- Cartão Crédito
@@ -150,17 +165,18 @@ function escolherPagamento(tipoDeEntrega) {
     3- Pix
     4- Picpay
     5- Dinheiro`));
+
+    let pagamentoEscolhido = pagamento(tipoDePagamento);
     
-    if(tipoDeEntrega.tipo == 'Delivery' && formaDePagamento == 5){
+    if(tipoDeEntrega.tipo == 'Delivery' && pagamentoEscolhido.tipo == 'Dinheiro'){
     
         let precisaDeTroco = prompt(`Precisa de Troco?`);
     
         if (precisaDeTroco[0] == "S" || precisaDeTroco[0] == "s") {
-            var troco = parseInt(prompt(`Troco para quanto?`));
-            return troco
+            pagamentoEscolhido.troco = parseInt(prompt(`Troco para quanto?`));
         }
-        return ''
     }
+    return pagamentoEscolhido;
 }
 function cardapio(){
    alert(`- Calabresa: Mussarela, Calabresa e cebola\n
