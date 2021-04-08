@@ -46,10 +46,9 @@ if (QuantidadeSabores == 2) {
         8- X-Fritas`);
 }
 
-var querbebida = prompt(`Você gostaria de uma bebida?`);
-
-if (querbebida[0] == "S" || querbebida[0] == "s") {
-    var tiposdebebidas = (prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
+var querBebida = prompt(`Você gostaria de uma bebida?`);
+if (querBebida[0] == "S" || querBebida[0] == "s") {
+    var tiposDeBebidas = (prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
     1- Coca-cola (R$12,00)\n
     2- Fanta (R$10,00)\n
     3- Guaraná (R$10,00)\n
@@ -57,4 +56,17 @@ if (querbebida[0] == "S" || querbebida[0] == "s") {
     5- Del Vale (R$7,00)`));
 }
 
-var tipoentrega = prompt(`Qual será a forma de entrega?\n 1- Balcão\n 2- Delivery`)
+var tipoEntrega = prompt(`Qual será a forma de entrega?\n 1- Balcão\n 2- Delivery`);
+if (tipoEntrega == 2){
+    var delivery = [
+        celularDelivery = prompt(`${nome}, qual seu número de celular:`),
+        rua = prompt(`Digite o nome da sua rua:`),
+        bairro = prompt(`Digite o seu bairro:`),
+        numero = prompt(`Qual o número da sua residência:`),
+        complemento = prompt(`Digite o complemento:\n Caso aja, caso não, deixe dê enter`),
+        pontoDeReferencia = prompt(`Digite um ponto de referência:`)
+    ]
+}else{
+    celularBalcao = prompt(`${nome}, qual seu número de celular:`);
+}
+
