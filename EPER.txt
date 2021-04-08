@@ -31,3 +31,8 @@ Começar:
     - Pix 
     - Dinheiro:
         - no delivery: perguntar se precisa de troco
+- Salvar o valor total e apresentar ao cliente antes de fechar o pedido
+- Informar o número do pedido e tempo estimado para entrega
+- Enviar mensagem de agradecimento
+
+
