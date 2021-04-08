@@ -1,0 +1,41 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.divbtn {
+    margin: 0.5em;
+}
+
+.btn {
+    width: 200px;
+    height: 40px;
+    border: solid 1px grey;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bt1 {
+    background-color: red;
+    color: white;
+}
+.bt2 {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+.bt3 {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+}
+.bt4 {
+    background-color: purple;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+}
+.bt5 {
+    background-color: orangered;
+    color: white;
+    border-radius: 40px 0px;
+}
