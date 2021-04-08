@@ -10,11 +10,24 @@ Precisamos de um sistema que receba os pedidos de uma pizzaria, os pedidos preci
 - O tipo de entrega (delivery ou balcão)
 
 Começar: 
-- O nome do cliente
+- O nome e sobrenome do cliente
 - O tipo de entrega: 
     - delivery: (retorna depois no checkout para pegar as informações da entrega)
+    - balcão
+- O pedido:
+    - O tamanho da pizza
+    - O tipo de borda       
+    - Os Sabores (Apenas 2 sabores por pizza) (1)
+    - A bebida (1)
+- A entrega:
+    - Se for, delivery:
         - nome completo
         - celular
-        - endereço
-    - balcão
-- O pedido
+        - endereço completo 
+- Forma de pagamento:
+    - Cartão
+        - Débito ou Crédito
+    - PicPay
+    - Pix 
+    - Dinheiro:
+        - no delivery: perguntar se precisa de troco
