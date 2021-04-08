@@ -16,13 +16,9 @@ function inserirBorda() {
     return tipoDeBorda;
 }
 function escolherSabores(quantidaDeSabores) {
-    if (quantidaDeSabores != 1 || quantidaDeSabores != 2) {
-        prompt(`Por favor, insira novamente a quantidade de sabores: 1 ou 2.`);
-        escolherSabores(quantidaDeSabores);
-    } else if(quantidaDeSabores == 1 || quantidaDeSabores == 2){
-        switch(quantidaDeSabores) {
-            case 1:
-                var sabor = prompt(`Digite o número do sabor da pizza:\n
+    switch (quantidaDeSabores) {
+        case 1:
+            var sabor = prompt(`Digite o número do sabor da pizza:\n
                     Relembrando as opções:\n
                     1- Calabresa\n
                     2- 4 queijos\n
@@ -32,9 +28,9 @@ function escolherSabores(quantidaDeSabores) {
                     6- Carne Seca\n
                     7- Lombo Canadense\n
                     8- X-Fritas`);
-                break;
-            case 2:
-                var saborUm = prompt(`Digite o número do sabor da pizza:\n
+            break;
+        case 2:
+            var saborUm = prompt(`Digite o número do sabor da pizza:\n
                     Relembrando as opções:\n
                     1- Calabresa\n
                     2- 4 queijos\n
@@ -44,7 +40,7 @@ function escolherSabores(quantidaDeSabores) {
                     6- Carne Seca\n
                     7- Lombo Canadense\n
                     8- X-Fritas`);
-                var saborDois = prompt(`Digite o número do segundo sabor:
+            var saborDois = prompt(`Digite o número do segundo sabor:
                     Relembrando as opções:\n
                     1- Calabresa\n
                     2- 4 queijos\n
@@ -54,7 +50,7 @@ function escolherSabores(quantidaDeSabores) {
                     6- Carne Seca\n
                     7- Lombo Canadense\n
                     8- X-Fritas`);
-                break;
-        }
+            break;
     }
 }
+
