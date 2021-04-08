@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     width: 100%;
     height: 100%;
@@ -9,13 +15,14 @@ body{
 header{
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: auto;
     background: seagreen;
-    padding-top: 10px;
     color: white;
     text-align: center;
     font-size: 30px;
     text-shadow: 2px 2px 2px rgb(25, 59, 40);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 p{
@@ -32,17 +39,34 @@ span{
     font-weight: bold;
 }
 
-.main{
-    height: 50px;
-    width: 50px;
-    background: seagreen;
-}
-
 .form{
     padding: 25px 25px 25px 25px;
-    position: relative;
-    top: 100px;
+    position: absolute;
+    top: 200px;
     left: 30px;
-    width: 400px;
+    max-width: 400px;
+    width: 70%;
     background: rgb(252, 85, 85);
+}
+
+.form input[type=submit]{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    background: white;
+    color: rgb(0, 0, 0);
+    border: 0;
+}
+
+.logo{
+    height: 120px;
+    box-shadow: 0px 0px 10px rgb(38, 97, 64);
+    border-radius: 50%;
+}
+
+.bg{
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    opacity: 50%;
 }
