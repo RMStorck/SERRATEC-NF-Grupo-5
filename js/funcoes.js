@@ -15,7 +15,6 @@ function inserirTamanho(tamanho) {
             return tamanho[3];
     }
 }
-
 function inserirBorda(borda) {
     let tipoDeBorda = parseInt(prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
     1- Gorgonzola (R$10,00)\n
@@ -101,7 +100,7 @@ function escolherSabores() {
 function escolherBebida(bebida) {
     let querBebida = prompt(`Você gostaria de uma bebida?`);
     if (querBebida[0] == "S" || querBebida[0] == "s") {
-        let tiposDeBebidas = (prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
+        let tiposDeBebidas = parseInt(prompt(`Digite o numero referente ao tipo de borda que voce quer:\n
         1- Coca-cola (R$12,00)\n
         2- Fanta (R$10,00)\n
         3- Guaraná (R$10,00)\n
@@ -132,13 +131,15 @@ function escolherEntrega(nome) {
             bairro: prompt(`Insira o seu bairro:`),
             numero: prompt(`Insira o número da sua residência?`),
             complemento: prompt(`Insira o complemento?`),
-            pontoDeReferencia: prompt(`Insira um ponto de referência:`)
+            pontoDeReferencia: prompt(`Insira um ponto de referência:`),
+            preco: 5,
          };
          return delivery;
     }else{
         let balcao = {
             tipo: 'Balcao',
-            celular: prompt(`${nome}, qual seu número de celular:`)
+            celular: prompt(`${nome}, qual seu número de celular:`),
+            preco: 0,
         };
         return balcao;
     }
@@ -178,7 +179,7 @@ function escolherPagamento(tipoDeEntrega) {
     }
     return pagamentoEscolhido;
 }
-function cardapio(){
+function cardapio() {
    alert(`- Calabresa: Mussarela, Calabresa e cebola\n
         - 4 Queijos: Mussarela, Cheddar, Parmesão e Prato\n
         - Frango com Catupiry :Mussarela, Frango e Catupiry\n
@@ -189,3 +190,4 @@ function cardapio(){
         - X-Fritas: Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`
     );
 }
+

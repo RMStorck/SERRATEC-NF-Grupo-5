@@ -34,3 +34,7 @@ let querBebida = escolherBebida(bebidas);
 let tipoDeEntrega = escolherEntrega(nome);
 
 let formaDePagamento = escolherPagamento(tipoDeEntrega);
+
+let totalPagar = tamanhoEscolhido.preco + tipoDeBorda.preco + querBebida.preco + tipoDeEntrega.preco;
+
+alert(`R$ ${totalPagar},00`);
