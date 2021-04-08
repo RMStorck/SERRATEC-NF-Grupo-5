@@ -53,5 +53,4 @@ if(tipoDeEntrega == 2 && formaDePagamento == 5){
     if (precisaDeTroco[0] == "S" || precisaDeTroco[0] == "s") {
         var troco = (prompt(`Quanto precisará de troco:`));
     }
-
 }
