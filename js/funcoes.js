@@ -16,6 +16,10 @@ function inserirBorda() {
     return tipoDeBorda;
 }
 function escolherSabores(quantidaDeSabores) {
+    do{
+        prompt('Por favor, insira a quantida de sabores correta: 1 ou 2')
+    } while(quantidaDeSabores != 1 || quantidaDeSabores !=2);
+
     switch (quantidaDeSabores) {
         case 1:
             var sabor = prompt(`Digite o número do sabor da pizza:\n
