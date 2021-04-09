@@ -16,6 +16,45 @@ header{
     background-color: black;
 }
 
+.caixa{
+    margin-left: 50%;
+    transform: translateX(-62%);
+}
+
+.caixaPreta{
+    width: 1200px;
+    height: 500px;
+    background: black;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+}
+
+.hidden{
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btnpedido{
+    position: relative;
+    width: 150px;
+    height: 80px;
+    margin-bottom: 50px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: xx-large;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btnpedido:hover{
+    background: white;
+    color: black;
+}
+
+
 footer {
     background: #000 url(../images/capa_PizzaMakers_inova_no_conceito_de_pizzaria.jpg) no-repeat;
     background-size: cover;

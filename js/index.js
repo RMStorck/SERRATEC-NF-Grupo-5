@@ -1,4 +1,6 @@
-let nome = prompt("Digite o seu nome:");
+function chamarCodigo() {
+    // document.getElementsByClassName("divbtn").style.display = 'none';
+    let nome = prompt("Digite o seu nome:");
     alert(`Seja bem vindo a Serra Pizza!\n${nome}, por favor, pressione enter para inciar o seu pedido:`);
 
     let tamanhos = [
@@ -44,3 +46,6 @@ let nome = prompt("Digite o seu nome:");
     let numeroRadom = Math.random() * 100000;
     let numeroDoPedido = numeroRadom.toFixed(0);
     let confirmacaoPedido = confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
+
+    document.getElementById("textoFinal").innerHTML = exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
+}

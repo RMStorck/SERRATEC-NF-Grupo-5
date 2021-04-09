@@ -2,3 +2,4 @@
 function chamarOPrompt(){ 
     prompt("Fala aew");
 }
+

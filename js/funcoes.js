@@ -190,8 +190,8 @@ function cardapio() {
         - X-Fritas: Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`
     );
 }
-function exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
-    return document.write(`<h1>Agradecemos sua preferência, senhor(a) ${nome}</h1>
+function exibirPedido(nome, tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
+    return `<h1>Agradecemos sua preferência, senhor(a) ${nome}</h1>
             <h2>Dados do pedido:</h2>
             Numero do Pedido: ${numeroDoPedido};<br>
             Pedido: <br> Pizza - 
@@ -201,11 +201,12 @@ function exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
             Tipo de Entrega: ${tipoDeEntrega.tipo};<br>
             Forma de Pagamento: ${formaDePagamento.tipo};<br>
             <br>O tempo de espera estimado é de 90 minutos.
-            `);
+            `;
 }
 function confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
     let confirmaPedido = prompt('Gostaria de confirmar o pedido?\nSim ou Não');
     if(confirmaPedido[0] == "S" || confirmaPedido[0] == "s") {
+        // return exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
         return exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
     } else{
         alert(`Caso queira refazer seu pedido, atualize a página.\n
@@ -213,4 +214,10 @@ function confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida
     }
 }
 
+function mostrarBtn(){
+    document.getElementById("divbtn").style.display = 'none';
+}
 
+
+// document.getElementsByClassName("caixaPreta").innerHTML = 
+// document.getElementsById("textoFinal").innerHTML
