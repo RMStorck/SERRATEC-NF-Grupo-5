@@ -43,4 +43,4 @@ alert(`O valor total do seu pedido é ${totalPagar.toLocaleString('pt-br',{style
 
 let numeroRadom = Math.random() * 100000;
 let numeroDoPedido = numeroRadom.toFixed(0);
-let confirmacaoPedido = confirmarPedido();
+let confirmacaoPedido = confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);

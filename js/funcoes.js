@@ -194,17 +194,19 @@ function exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
     return document.write(`<h1>Agradecemos sua preferência, senhor(a) ${nome}</h1>
             <h2>Dados do pedido:</h2>
             Numero do Pedido: ${numeroDoPedido};<br>
-            Pedido: Pizza - ${tamanhoEscolhido}, ${tipoDeBorda}, ${quaisSabores} e Bebida ${querBebida};<br>
+            Pedido: <br> Pizza - 
+            Tamanho - ${tamanhoEscolhido.descricao}, Borda - ${tipoDeBorda.descricao}, Sabor - ${quaisSabores} 
+            <br> Bebida - ${querBebida.descricao};<br>
             Total à pagar: ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})};<br>
-            Tipo de Entrega: ${tipoDeEntrega};<br>
-            Forma de Pagamento: ${formaDePagamento};<br>
+            Tipo de Entrega: ${tipoDeEntrega.tipo};<br>
+            Forma de Pagamento: ${formaDePagamento.tipo};<br>
             <br>O tempo de espera estimado é de 90 minutos.
             `);
 }
 function confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
     let confirmaPedido = prompt('Gostaria de confirmar o pedido?\nSim ou Não');
     if(confirmaPedido[0] == "S" || confirmaPedido[0] == "s") {
-        return exibirPedido();
+        return exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
     } else{
         alert(`Caso queira refazer seu pedido, atualize a página.\n
         Caso não, agradecemos a sua visita.`);
