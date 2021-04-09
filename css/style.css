@@ -1,41 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+/*Altera toda a fonte da página*/
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:100%;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.divbtn {
-    margin: 0.5em;
+
+/*Muda apenas o header inicial*/
+
+header{
+    background-color: black;
 }
 
-.btn {
-    width: 200px;
-    height: 40px;
-    border: solid 1px grey;
-    background: none;
-    font-size: 30px;
-    font-weight: bold;
+footer {
+    background: #000 url(../images/capa_PizzaMakers_inova_no_conceito_de_pizzaria.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    height: 860px;
+    position: relative;
+    padding-top: 30px;
 }
 
-.bt1 {
-    background-color: red;
+.logo{
+    width: 20px 20px;
+
+
+}
+
+a{
+    position: relative;
+    color: white;
+    font-size: 50px;
+    padding-right: 20px;
+    top: 50px;
+}
+
+a:hover{
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+
+/*Cor do texto do link*/
+#header a {
     color: white;
 }
-.bt2 {
-    background-color: green;
-    color: white;
-    border-radius: 10px;
+
+#header nav {
+    text-align: right;
+
 }
-.bt3 {
-    background-color: blue;
-    color: white;
-    border-radius: 20px;
+
+#header nav ul, #header nav ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
 }
-.bt4 {
-    background-color: purple;
-    color: white;
-    border-radius: 0px 20px 20px 0px;
-}
-.bt5 {
-    background-color: orangered;
-    color: white;
-    border-radius: 40px 0px;
+
+#header .title {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    text-align: center;
 }
