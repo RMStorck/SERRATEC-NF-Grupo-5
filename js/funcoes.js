@@ -194,7 +194,7 @@ function cardapio() {
 function exibirPedido(nome, numeroDoPedido, tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida, totalPagar, tipoDeEntrega, formaDePagamento) {
     return `<h1>Agradecemos sua preferência, senhor(a) ${nome}</h1>
             <h2>Dados do pedido:</h2>
-            Numero do Pedido: ${numeroDoPedido};<br>
+            Numero do Pedido: ${numeroDoPedido}<br>
             <h3>Pedido:</h3>
             <strong>Pizza Tamanho</strong> - ${tamanhoEscolhido.descricao}<br>
             <strong>Borda</strong> - ${tipoDeBorda.descricao}<br>
