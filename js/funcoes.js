@@ -175,6 +175,7 @@ function escolherPagamento(tipoDeEntrega) {
     
         if (precisaDeTroco[0] == "S" || precisaDeTroco[0] == "s") {
             pagamentoEscolhido.troco = parseInt(prompt(`Troco para quanto?`));
+            
         }
     }
     return pagamentoEscolhido;

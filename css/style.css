@@ -14,16 +14,19 @@ body {
 
 header{
     background-color: black;
+    padding: 5px;
 }
 
-.caixa{
+/* .caixa{
     margin-left: 50%;
     transform: translateX(-62%);
-}
+} */
 
 .caixaPreta{
-    width: 1200px;
-    height: 500px;
+    width: 500px;
+    height: 300px;
+    display: table;
+    margin: auto;
     background: black;
     border-radius: 20px;
     border: 2px solid white;
@@ -102,11 +105,11 @@ a:hover{
     display: inline-block;
 }
 
-#header .title {
+/* #header .title {
     position: absolute;
     left: 0;
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
     text-align: center;
-}
+} */
