@@ -198,10 +198,10 @@ function exibirPedido(nome, numeroDoPedido, tamanhoEscolhido, tipoDeBorda, quais
             <strong>Pizza Tamanho</strong> - ${tamanhoEscolhido.descricao}<br>
             <strong>Borda</strong> - ${tipoDeBorda.descricao}<br>
             <strong>Sabor</strong> - ${quaisSabores} <br>
-            <strong>Bebida</strong> - ${querBebida.descricao};<br><br>
-            <strong>Total à pagar:</strong> ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})};<br>
-            <strong>Tipo de Entrega:</strong> ${tipoDeEntrega.tipo};<br>
-            <strong>Forma de Pagamento:</strong> ${formaDePagamento.tipo};<br>
+            <strong>Bebida</strong> - ${querBebida.descricao}<br><br>
+            <strong>Total à pagar:</strong> ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}<br>
+            <strong>Tipo de Entrega:</strong> ${tipoDeEntrega.tipo}<br>
+            <strong>Forma de Pagamento:</strong> ${formaDePagamento.tipo}<br>
             <br>
             <h3>O tempo de espera estimado é de 90 minutos.</h3>
             `;
