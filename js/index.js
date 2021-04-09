@@ -1,7 +1,7 @@
 function chamarCodigo() {
     // document.getElementsByClassName("divbtn").style.display = 'none';
     let nome = prompt("Digite o seu nome:");
-    alert(`Seja bem vindo a Serra Pizza!\n${nome}, por favor, pressione enter para inciar o seu pedido:`);
+    alert(`Seja bem vindo a Five Pizzas!\n${nome}, por favor, pressione enter para inciar o seu pedido:`);
 
     let tamanhos = [
         { descricao: 'Pequena', preco: 25 },
