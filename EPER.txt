@@ -2,6 +2,12 @@ Grupo: Dany, Rafael, Roberta, Rosimar e Sylvia
 
 Objetivo: Criar um sistema para efetuar pedidos em Pizzaria.
 
+1º Entender o problema - ok
+2º Planejar - ok
+3º Executar - ok
+4º Revisar - ok
+
+Planejamento:
 Precisamos de um sistema que receba os pedidos de uma pizzaria, os pedidos precisam ter:
 - O tamanho da pizza
 - O tipo de borda       
