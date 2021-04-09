@@ -28,6 +28,8 @@ header{
     border-radius: 20px;
     border: 2px solid white;
     color: white;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 
 .hidden{

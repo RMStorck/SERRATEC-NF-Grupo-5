@@ -137,7 +137,7 @@ function escolherEntrega(nome) {
          return delivery;
     }else{
         let balcao = {
-            tipo: 'Balcao',
+            tipo: 'Balcão',
             celular: prompt(`${nome}, qual seu número de celular:`),
             preco: 0,
         };
@@ -190,24 +190,27 @@ function cardapio() {
         - X-Fritas: Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`
     );
 }
-function exibirPedido(nome, tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
+function exibirPedido(nome, numeroDoPedido, tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida, totalPagar, tipoDeEntrega, formaDePagamento) {
     return `<h1>Agradecemos sua preferência, senhor(a) ${nome}</h1>
             <h2>Dados do pedido:</h2>
             Numero do Pedido: ${numeroDoPedido};<br>
-            Pedido: <br> Pizza - 
-            Tamanho - ${tamanhoEscolhido.descricao}, Borda - ${tipoDeBorda.descricao}, Sabor - ${quaisSabores} 
-            <br> Bebida - ${querBebida.descricao};<br>
-            Total à pagar: ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})};<br>
-            Tipo de Entrega: ${tipoDeEntrega.tipo};<br>
-            Forma de Pagamento: ${formaDePagamento.tipo};<br>
-            <br>O tempo de espera estimado é de 90 minutos.
+            <h3>Pedido:</h3>
+            <strong>Pizza Tamanho</strong> - ${tamanhoEscolhido.descricao}<br>
+            <strong>Borda</strong> - ${tipoDeBorda.descricao}<br>
+            <strong>Sabor</strong> - ${quaisSabores} <br>
+            <strong>Bebida</strong> - ${querBebida.descricao};<br><br>
+            <strong>Total à pagar:</strong> ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})};<br>
+            <strong>Tipo de Entrega:</strong> ${tipoDeEntrega.tipo};<br>
+            <strong>Forma de Pagamento:</strong> ${formaDePagamento.tipo};<br>
+            <br>
+            <h3>O tempo de espera estimado é de 90 minutos.</h3>
             `;
 }
-function confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
+function confirmarPedido(nome, numeroDoPedido, tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida, totalPagar, tipoDeEntrega, formaDePagamento) {
     let confirmaPedido = prompt('Gostaria de confirmar o pedido?\nSim ou Não');
     if(confirmaPedido[0] == "S" || confirmaPedido[0] == "s") {
         // return exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
-        return exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida);
+        return exibirPedido(nome, numeroDoPedido, tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida, totalPagar, tipoDeEntrega, formaDePagamento);
     } else{
         alert(`Caso queira refazer seu pedido, atualize a página.\n
         Caso não, agradecemos a sua visita.`);
