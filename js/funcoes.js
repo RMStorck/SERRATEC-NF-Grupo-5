@@ -190,4 +190,25 @@ function cardapio() {
         - X-Fritas: Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`
     );
 }
+function exibirPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
+    return document.write(`<h1>Agradecemos sua preferência, senhor(a) ${nome}</h1>
+            <h2>Dados do pedido:</h2>
+            Numero do Pedido: ${numeroDoPedido};<br>
+            Pedido: Pizza - ${tamanhoEscolhido}, ${tipoDeBorda}, ${quaisSabores} e Bebida ${querBebida};<br>
+            Total à pagar: ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})};<br>
+            Tipo de Entrega: ${tipoDeEntrega};<br>
+            Forma de Pagamento: ${formaDePagamento};<br>
+            <br>O tempo de espera estimado é de 90 minutos.
+            `);
+}
+function confirmarPedido(tamanhoEscolhido, tipoDeBorda, quaisSabores, querBebida) {
+    let confirmaPedido = prompt('Gostaria de confirmar o pedido?\nSim ou Não');
+    if(confirmaPedido[0] == "S" || confirmaPedido[0] == "s") {
+        return exibirPedido();
+    } else{
+        alert(`Caso queira refazer seu pedido, atualize a página.\n
+        Caso não, agradecemos a sua visita.`);
+    }
+}
+
 

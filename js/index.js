@@ -1,5 +1,6 @@
 let nome = prompt("Digite o seu nome:");
 alert(`Seja bem vindo a Serra Pizza!\n${nome}, por favor, pressione enter para inciar o seu pedido:`);
+
 let tamanhos = [
     {descricao: 'pequena', preco: 25}, 
     {descricao: 'media', preco: 30}, 
@@ -7,6 +8,7 @@ let tamanhos = [
     {descricao: 'familia', preco: 45}
 ];
 let tamanhoEscolhido = inserirTamanho(tamanhos);
+
 let bordas = [
     {descricao: 'gorgonzola', preco: 10}, 
     {descricao: 'provolone', preco: 8}, 
@@ -15,6 +17,7 @@ let bordas = [
     {descricao: 'sem borda', preco: 0}
 ];
 let tipoDeBorda = inserirBorda(bordas);
+
 alert(`Pronto, ${nome}. Agora, vou te mostrar a lista de sabores:`);
 let apresentarCardapio = cardapio();
 
@@ -36,5 +39,8 @@ let tipoDeEntrega = escolherEntrega(nome);
 let formaDePagamento = escolherPagamento(tipoDeEntrega);
 
 let totalPagar = tamanhoEscolhido.preco + tipoDeBorda.preco + querBebida.preco + tipoDeEntrega.preco;
+alert(`O valor total do seu pedido é ${totalPagar.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`);
 
-alert(`R$ ${totalPagar},00`);
+let numeroRadom = Math.random() * 100000;
+let numeroDoPedido = numeroRadom.toFixed(0);
+let confirmacaoPedido = confirmarPedido();
